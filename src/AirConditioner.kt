@@ -19,6 +19,8 @@ class AirConditioner {
         val isTemperatureRange = temperature in 16..29
         if (isOn && isTemperatureRange) {
             temperature += interval
+        } else if(!isOn){
+            throw ACIsOffException("Ac is off!");
         }
     }
 
