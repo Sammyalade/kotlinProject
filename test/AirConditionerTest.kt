@@ -35,4 +35,13 @@ class AirConditionerTest {
       assertEquals(airConditioner.getTemperature(), 17)
    }
 
+   @Test
+   fun powerOffAc_increaseTemperature_throwsExceptionTest(){
+      val airConditioner = AirConditioner()
+      assertFalse(airConditioner.isOn())
+      assertThrows(ACIsOffException::class.java){airConditioner.increaseTemperature(1)}
+   }
+
+
+
 }
