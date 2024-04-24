@@ -3,7 +3,8 @@ import java.util.*
 fun main(args: Array<String>) {
     val arrays: Array<Int> = arrayOf(2, 6, 1, 9, 9);
     val resultArray = addOne(arrays)
-    println(resultArray.contentToString())}
+    println(resultArray.contentToString())
+}
 fun addOne(array: Array<Int>): Array<Int> {
     lateinit var newArray: Array<Int>;
     var increment: Int = 1;
